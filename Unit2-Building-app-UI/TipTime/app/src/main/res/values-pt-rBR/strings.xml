@@ -3,5 +3,7 @@
     <string name="app_name">Hora da Gorjeta</string>
     <string name="calculate_tip">Calcular Gorjeta</string>
     <string name="bill_amount">Valor da Conta</string>
-    <string name="tip_amount">Valor da Gorjeta</string>
+    <string name="tip_amount">Valor da Gorjeta: %s</string>
+    <string name="how_was_the_service">Porcentagem da Gorjeta</string>
+    <string name="round_up_tip">Arredondar Gorjeta?</string>
 </resources>
