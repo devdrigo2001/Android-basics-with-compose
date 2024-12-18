@@ -7,16 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -28,6 +26,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.motionEventSpy
+import androidx.compose.ui.layout.VerticalAlignmentLine
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ArtGalleryTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    Home()
+                    ArtGaleryLayout()
                 }
             }
         }
@@ -52,15 +52,13 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Home(modifier: Modifier = Modifier) {
+fun ArtGaleryLayout(modifier: Modifier = Modifier) {
     var currentImage by remember { mutableStateOf(1) }
 
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.padding(20.dp)
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
     ) {
         when(currentImage){
             1 ->
@@ -68,25 +66,18 @@ fun Home(modifier: Modifier = Modifier) {
                     title = stringResource(R.string.vasco_art_title),
                     description = stringResource(R.string.vasco_art_desc),
                     drawableResource = R.drawable.vasco,
-                    onImageClick = {currentImage = 2},
-                    onImagePreviousClick = {}
+                    onClickNext = {currentImage = 2},
+                    onClickPrevious = {}
                 )
             2 ->
                 Art(
                     title = "Android",
                     description = "GreenAndroid(2024)",
                     drawableResource = R.drawable.ic_launcher_background,
-                    onImageClick = {currentImage = 2},
-                    onImagePreviousClick = {currentImage = 1}
+                    onClickNext = {currentImage = 2},
+                    onClickPrevious = {currentImage = 1}
                 )
-            3 ->
-                Art(
-                title = "Visão geral",
-                description = "Visão geral do Museu do Banco do Brasil",
-                drawableResource = R.drawable.overview,
-                onImageClick = {currentImage = 3},
-                onImagePreviousClick = {currentImage = 2}
-            )
+
 
         }
 
@@ -100,19 +91,19 @@ fun Art(
     title: String,
     description: String,
     drawableResource : Int,
-    onImageClick : () -> Unit,
-    onImagePreviousClick : () -> Unit,
+    onClickPrevious: () -> Unit,
+    onClickNext: () -> Unit,
     modifier: Modifier = Modifier) {
-    Box(modifier = Modifier
-        .size(width = 250.dp, height = 250.dp)
-        .background(Color.White)
-        
-    )
+    Column(modifier = Modifier.background(Color.White).fillMaxWidth())
     {
         Image(
             painter = painterResource(drawableResource),
             contentDescription = "museum image",
-            modifier = Modifier.size(width = 200.dp, height = 200.dp).align(Alignment.Center)
+            modifier = Modifier.width(300.dp)
+                .align(Alignment.CenterHorizontally)
+                .padding(20.dp)
+
+
 
 
 
@@ -120,12 +111,24 @@ fun Art(
     }
 
     Spacer(modifier = Modifier.height(30.dp))
+    TitleAndDescription(title = title, description = description)
 
+
+    Spacer(modifier = Modifier.height(50.dp))
+    ButtonRow(onClickPrevious = onClickPrevious, onClickNext = onClickNext, modifier.width(60.dp))
+
+
+}
+
+@Composable
+fun TitleAndDescription(title: String, description: String){
     Column(
         modifier = Modifier
             .background(color= Color(0xabdefafa))
-            .size(250.dp, 100.dp)
-            .fillMaxSize()
+            .fillMaxWidth()
+
+
+
     ) {
         Text(
             text = title,
@@ -141,37 +144,28 @@ fun Art(
 
 
     }
-    Spacer(Modifier.height(200.dp))
+}
 
-    Row(modifier = Modifier.size(250.dp))
-    {
-        Button(
-            onClick = onImagePreviousClick,
-            modifier = Modifier
-                .padding(15.dp)
-                .size(width = 105.dp, height = 40.dp)
-
-        ) {
-            Text("Previous")
+@Composable
+fun ButtonRow(onClickPrevious: () -> Unit, onClickNext: () -> Unit, modifier: Modifier = Modifier){
+    Row(horizontalArrangement = Arrangement.Center){
+        Button(onClick = onClickPrevious) {
+            Text(text = "Previous")
         }
-        Button(
-            onClick = onImageClick,
-            modifier = Modifier
-                .padding(15.dp)
-                .size(width = 105.dp, height = 40.dp)
-        )
-        {
-            Text("Next")
+        Spacer(modifier = modifier)
+        Button(onClick = onClickNext) {
+            Text(text = "Next")
         }
     }
-
 }
+
+
 
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     ArtGalleryTheme {
-        Home()
+        ArtGaleryLayout()
     }
 }
