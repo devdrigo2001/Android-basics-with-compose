@@ -5,9 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.calculateEndPadding
 import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,6 +18,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -45,6 +50,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     AffirmationApp()
+
                 }
             }
         }
@@ -62,13 +68,13 @@ fun AffirmationApp() {
                 start = WindowInsets.safeDrawing.asPaddingValues()
                     .calculateStartPadding(layoutDirection),
                 end = WindowInsets.safeDrawing.asPaddingValues()
-                    .calculateStartPadding(layoutDirection)
-            )
+                    .calculateEndPadding(layoutDirection),
+            ),
     ) {
-        AffirmationList(
-          affirmationList = DataSource().loadAffirmations()
-        )
 
+    AffirmationList(
+                affirmationList = DataSource().loadAffirmations()
+            )
     }
 }
 @Composable
@@ -80,7 +86,7 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
                 contentDescription = stringResource(affirmation.stringResourceId),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(194.dp),
+                    .height(300.dp),
                 contentScale = ContentScale.Crop
             )
             Text(
@@ -92,14 +98,21 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
     }
 }
 
+
 @Composable
 fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Modifier) {
-    LazyColumn(modifier = modifier) {
-        items(affirmationList) { affirmation ->
-            AffirmationCard(
-                affirmation = affirmation,
-                modifier = Modifier.padding(8.dp)
-            )
+
+        LazyColumn(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp))
+        {
+            items(affirmationList) { affirmation ->
+                AffirmationCard(
+                    affirmation = affirmation,
+                    modifier = Modifier.padding(8.dp)
+                )
+
         }
     }
 }
@@ -107,7 +120,9 @@ fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifier = Mod
 @Preview(showBackground = true)
 @Composable
 private fun AffirmationCardPreview() {
+    AffirmationsTheme{
+       AffirmationApp()
+    }
 
-        AffirmationCard(Affirmation(R.string.affirmation1, R.drawable.image1))
 
 }
