@@ -24,6 +24,7 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -65,7 +66,7 @@ class MainActivity : ComponentActivity() {
 fun WoofApp() {
     LazyColumn {
         items(dogs) {
-            DogItem(dog = it)
+            DogItem(dog = it, modifier = Modifier.fillMaxWidth())
         }
     }
 }
@@ -83,7 +84,6 @@ fun DogItem(
 ) {
     Row(
         modifier = modifier
-            .fillMaxWidth()
             .padding(dimensionResource(R.dimen.padding_small))
     ) {
         DogIcon(dog.imageResourceId)
@@ -134,7 +134,7 @@ fun DogInformation(
             modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
         )
         Text(
-            text = stringResource(R.string.years_old, dogAge),
+            text = stringResource(R.string.years_old, dogAge)
         )
     }
 }
