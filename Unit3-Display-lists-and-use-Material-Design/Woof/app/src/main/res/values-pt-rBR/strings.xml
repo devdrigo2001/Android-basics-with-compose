@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="about">Sobre:</string>
     <string name="years_old">%d anos de idade</string>
+    <string name="dog_description_1">Comer guloseimas no terraço</string>
+    <string name="dog_description_2">Latir para o papai</string>
+    <string name="dog_description_3">Roubar meias</string>
+    <string name="dog_description_4">Conhecer novos animais</string>
+    <string name="dog_description_5">Cavar buracos no jardim</string>
+    <string name="dog_description_6">Perseguir a espuma do mar</string>
+    <string name="dog_description_7">Incomadar os pais dela</string>
+    <string name="dog_description_8">Banho de sol</string>
+    <string name="dog_description_9">Dormir em lugares perigosos</string>
+    <string name="expand_button_content_description">Ver mais ou menos informação sobre um cachorro</string>
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Superherois</string>
+    <string name="hero1">Nick a noite e o dia</string>
+    <string name="description1">O herói da mochila a jato</string>
+    <string name="hero2">Protetor da realidade</string>
+    <string name="description2">Compreende a verdade absoluta</string>
+    <string name="hero3">André, o Gigante</string>
+    <string name="description3">Imita a luz e a noite para se misturar</string>
+    <string name="hero4">Benjamin, o Bravo</string>
+    <string name="description4">Aproveita o poder do canário para se desenvolver com coragem</string>
+    <string name="hero5">"Maru Magnifica "</string>
+    <string name="description5">Desliza sem esforço para salvar o dia</string>
+    <string name="hero6">Yasmine Dinâmica</string>
+    <string name="description6">Capacidade de mudar para qualquer forma e energizar</string>
+</resources>
