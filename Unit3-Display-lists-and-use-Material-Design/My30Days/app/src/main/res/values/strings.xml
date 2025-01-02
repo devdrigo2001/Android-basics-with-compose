@@ -1,3 +1,103 @@
 <resources>
     <string name="app_name">My 30 Days</string>
+    <string name="dayof">Bem estar </string>
+    <string name="day">Dia </string>
+    <string name="day1_title">Respire profundamente</string>
+    <string name="day1_desc">Dedique alguns minutos para fazer respirações profundas e conscientes. Respire pelo nariz, segure por alguns segundos e expire lentamente.
+</string>
+    <string name="day2_title">Hidrate-se adequadamente</string>
+    <string name="day2_desc">Beba pelo menos 2 litros de água ao longo do dia para manter seu corpo bem hidratado.
+</string>
+    <string name="day3_title">Caminhe ao ar livre</string>
+    <string name="day3_desc">Dê um passeio de 20 minutos ao ar livre. Pode ser um parque, uma praia ou qualquer área verde.</string>
+    <string name="day4_title">Estabeleça metas simples
+</string>
+    <string name="day4_desc">Defina uma meta simples e alcançável para o dia, como organizar uma parte da casa ou concluir uma tarefa pendente.
+</string>
+    <string name="day5_title">Pratique a gratidão
+</string>
+    <string name="day5_desc">Dedique alguns minutos para escrever ou refletir sobre três coisas pelas quais você é grato(a).
+</string>
+    <string name="day6_title">Medite por 5 minutos</string>
+    <string name="day6_desc">Experimente meditar por 5 minutos, focando apenas na sua respiração ou em um mantra de sua escolha.
+</string>
+    <string name="day7_title">Desconecte-se das telas</string>
+    <string name="day7_desc">Passe uma hora do seu dia sem olhar para telas de celular, computador ou televisão.
+</string>
+    <string name="day8_title">Alongue-se ao acordar</string>
+    <string name="day8_desc">Ao acordar, faça uma série de alongamentos suaves para relaxar os músculos e melhorar a circulação.
+</string>
+    <string name="day9_title">Tenha uma alimentação balanceada
+</string>
+    <string name="day9_desc">Opte por refeições ricas em nutrientes, com frutas, legumes, grãos integrais e proteínas de boa qualidade.
+</string>
+    <string name="day10_title"> Durma 8 horas por noite</string>
+    <string name="day10_desc">Priorize o sono e tente dormir por pelo menos 8 horas para permitir a regeneração do corpo e da mente.
+</string>
+    <string name="day11_title">Pratique a gentileza</string>
+    <string name="day11_desc">Realize um ato de bondade, como ajudar alguém ou dar um elogio sincero.
+</string>
+    <string name="day12_title">Ouça música relaxante</string>
+    <string name="day12_desc">Dedique um tempo para ouvir uma música suave e relaxante que ajude a diminuir a tensão do dia.</string>
+    <string name="day13_title">Faça uma pausa no trabalho</string>
+    <string name="day13_desc">Durante o expediente, faça uma pausa de 10 minutos para se alongar ou simplesmente descansar os olhos.
+</string>
+    <string name="day14_title">Pratique atividade física</string>
+    <string name="day14_desc">Faça pelo menos 30 minutos de atividade física, seja uma caminhada, yoga ou treino de musculação.
+    ></string>
+    <string name="day15_title">Faça uma digital detox</string>
+    <string name="day15_desc">Desligue notificações do celular por algumas horas e evite o uso de redes sociais.
+</string>
+    <string name="day16_title">Evite multitarefas</string>
+    <string name="day16_desc">Concentre-se em realizar uma tarefa de cada vez, sem tentar fazer várias coisas ao mesmo tempo.
+</string>
+    <string name="day17_title">Passe tempo com amigos ou familiares</string>
+    <string name="day17_desc">Dedique tempo de qualidade para socializar com quem você gosta, seja pessoalmente ou por videochamada.
+</string>
+    <string name="day18_title">Mantenha o ambiente organizado
+</string>
+    <string name="day18_desc">Organize seu espaço de trabalho e de convivência, retirando objetos desnecessários que possam causar distração.
+</string>
+    <string name="day19_title">Pratique um hobby
+</string>
+    <string name="day19_desc">Dedique um tempo para praticar uma atividade que você gosta, como ler, pintar ou cozinhar.
+</string>
+    <string name="day20_title"> Faça algo novo</string>
+    <string name="day20_desc">Tente algo novo hoje, como aprender uma receita diferente ou iniciar uma nova atividade física.
+</string>
+    <string name="day21_title">Pratique o autocuidado
+</string>
+    <string name="day21_desc">Tire um tempo para cuidar de si mesmo(a), seja com um banho relaxante, cuidados com a pele ou simplesmente descansando.
+</string>
+    <string name="day22_title">Desfrute de um momento de silêncio</string>
+    <string name="day22_desc"> Reserve 10 minutos do seu dia para simplesmente ficar em silêncio, sem distrações. Apenas respire e sinta o momento.
+</string>
+    <string name="day23_title">Faça uma refeição saudável e simples</string>
+    <string name="day23_desc">Prepare uma refeição simples e nutritiva, priorizando alimentos frescos e de fácil digestão.
+</string>
+    <string name="day24_title">Desafie-se fisicamente
+</string>
+    <string name="day24_desc">Faça um exercício físico que desafie seu corpo, seja uma corrida mais longa ou um treino de força.
+</string>
+    <string name="day25_title">Sorria mais</string>
+    <string name="day25_desc">Sorria para si mesmo e para os outros ao longo do dia. Um sorriso genuíno pode melhorar seu humor e o dos outros.</string>
+    <string name="day26_title">Aceite os seus sentimentos
+</string>
+    <string name="day26_desc">Permita-se sentir o que está sentindo, seja tristeza, alegria ou frustração. Aceitar as emoções sem julgamento é essencial para o bem-estar emocional.
+</string>
+    <string name="day27_title">Conecte-se com a natureza</string>
+    <string name="day27_desc">Passe algum tempo em contato com a natureza, seja fazendo uma caminhada, meditando ao ar livre ou apenas observando o ambiente natural ao redor.
+</string>
+    <string name="day28_title">Faça uma limpeza mental
+</string>
+    <string name="day28_desc">Tire um tempo para refletir sobre as preocupações que estão ocupando sua mente e deixe ir aquilo que não serve mais.
+</string>
+    <string name="day29_title">Pratique a atenção plena (Mindfulness)
+</string>
+    <string name="day29_desc">Dedique alguns minutos do seu dia para praticar mindfulness, focando totalmente no que você está fazendo no momento, sem distrações.
+</string>
+    <string name="day30_title">Reflita sobre sua jornada de bem-estar</string>
+    <string name="day30_desc">No último dia, reflita sobre como as práticas dos últimos 30 dias afetaram sua vida. O que mudou? O que mais você pode incorporar na sua rotina?
+</string>
+
 </resources>

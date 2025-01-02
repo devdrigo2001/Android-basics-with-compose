@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DayItem(modifier: Modifier = Modifier) {
     Card { Text("Title") }
+
 }
 
 @Preview(showBackground = true)
