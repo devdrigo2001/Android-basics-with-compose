@@ -6,12 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.my30days.ui.theme.My30DaysTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,29 +20,25 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             My30DaysTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                Surface(modifier = Modifier.fillMaxSize()) {
+
+                }
+
                 }
             }
         }
     }
-}
+
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun DayItem(modifier: Modifier = Modifier) {
+    Card { Text("Title") }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     My30DaysTheme {
-        Greeting("Android")
+       DayItem()
     }
 }
