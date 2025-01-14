@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Decifrar</string>
+    <string name="instructions">Decifre a palavra usando todas as letras.</string>
+    <string name="skip">Pular</string>
+    <string name="submit">Enviar</string>
+    <string name="score">Pontuação: %d</string>
+    <string name="enter_your_word">Digite sua palavra</string>
+    <string name="congratulations">Parabéns!</string>
+    <string name="you_scored">Você pontuou: %d</string>
+    <string name="exit">Sair</string>
+    <string name="play_again">Jogar de novo</string>
+    <string name="wrong_guess">Palpite Errado!</string>
+</resources>

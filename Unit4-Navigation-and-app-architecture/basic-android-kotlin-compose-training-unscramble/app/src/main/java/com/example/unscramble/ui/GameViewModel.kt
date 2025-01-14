@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.example.unscramble.data.MAX_NO_OF_WORDS
 import com.example.unscramble.data.SCORE_INCREASE
 import com.example.unscramble.data.allWords
+import com.example.unscramble.data.allWordsBr
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -25,7 +26,7 @@ class GameViewModel: ViewModel() {
 
     private fun pickRandomWordAndShuffle(): String {
         //Contiue picking up a new random word until you get one that hasn't been used before
-        currentWord = allWords.random()
+        currentWord = allWordsBr.random()
         if (usedWords.contains(currentWord)) {
                 return pickRandomWordAndShuffle()
         }else{
